@@ -1,0 +1,263 @@
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #0B0B0B;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(200, 169, 81, 0.03) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-header h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: #D4AF37;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #F2F2F2, #D4AF37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.testimonials-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.testimonial-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.testimonial-card {
+    background: rgba(17, 17, 17, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(200, 169, 81, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+    border-color: rgba(200, 169, 81, 0.3);
+}
+
+.testimonial-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.testimonial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.testimonial-card:hover .testimonial-img img {
+    transform: scale(1.05);
+}
+
+.testimonial-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(11, 11, 11, 0.2), rgba(11, 11, 11, 0.8));
+}
+
+.testimonial-content {
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    height: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background: rgba(200, 169, 81, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D4AF37;
+    font-size: 20px;
+    border: 1px solid rgba(200, 169, 81, 0.2);
+}
+
+.testimonial-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #F2F2F2;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(200, 169, 81, 0.1);
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #D4AF37;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #F2F2F2;
+    margin: 0 0 5px;
+}
+
+.author-info span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #D4AF37;
+    display: block;
+}
+
+/* Remove slider navigation for card layout */
+.testimonial-nav {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .testimonial-slider {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .testimonial-slider {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 30px;
+    }
+    
+    .testimonial-card {
+        margin-bottom: 30px;
+    }
+    
+    .testimonial-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonials-section {
+        padding: 80px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .testimonial-content {
+        padding: 1.5rem;
+    }
+    
+    .quote-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* Ensure WOW.js animations work well */
+.wow {
+    visibility: visible !important;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Add animation when scrolled into view */
+.wow.animate__fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

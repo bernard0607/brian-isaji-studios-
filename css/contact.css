@@ -1,0 +1,302 @@
+/* Contact Section */
+.contact-section {
+    background-color: #0B0B0B;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/backgrounds/contact-bg.jpg') center/cover no-repeat;
+    opacity: 0.03;
+    z-index: 1;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Contact Info */
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-text p {
+    color: #F2F2F2;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.contact-details {
+    margin-top: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(200, 169, 81, 0.1);
+    border: 1px solid rgba(200, 169, 81, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: #D4AF37;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    background: rgba(200, 169, 81, 0.2);
+    transform: translateY(-3px);
+}
+
+.contact-text h4 {
+    color: #F2F2F2;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+}
+
+.contact-text a {
+    color: #F2E5C4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-text a:hover {
+    color: #D4AF37;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 30px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(200, 169, 81, 0.1);
+    border: 1px solid rgba(200, 169, 81, 0.2);
+    color: #D4AF37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #D4AF37;
+    color: #0B0B0B;
+    transform: translateY(-3px);
+}
+
+/* Contact Form */
+.contact-form-container {
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(200, 169, 81, 0.1);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-container:hover {
+    border-color: rgba(200, 169, 81, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #F2F2F2;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(200, 169, 81, 0.3);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: #F2E5C4;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group input:not(:placeholder-shown),
+.form-group textarea:not(:placeholder-shown) {
+    border-bottom-color: #D4AF37;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 0.85rem;
+    color: #D4AF37;
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, #D4AF37, #F2E5C4);
+    color: #0B0B0B;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #F2E5C4, #D4AF37);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.btn-submit:hover::before {
+    opacity: 1;
+}
+
+.btn-submit i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn-submit:hover i {
+    transform: translateX(5px);
+}
+
+/* Form Message */
+.form-message {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.form-message.success {
+    background: rgba(46, 125, 50, 0.2);
+    border: 1px solid #2e7d32;
+    color: #a5d6a7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-info {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .contact-form-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 70px 0;
+    }
+    
+    .contact-container {
+        padding: 0 15px;
+    }
+    
+    .contact-form-container {
+        padding: 25px;
+    }
+    
+    .btn-submit {
+        width: 100%;
+    }
+    
+    .contact-text p {
+        font-size: 1rem;
+    }
+}

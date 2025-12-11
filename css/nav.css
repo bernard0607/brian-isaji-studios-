@@ -1,0 +1,242 @@
+/* Modern Navigation Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    padding: 1rem 0;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled {
+    padding: 0.5rem 0;
+    background: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.navbar-brand h2 .text-gold {
+    color: #ffc107;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav {
+    gap: 1.5rem;
+}
+
+.nav-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 0 !important;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #ffc107;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff !important;
+}
+
+.nav-link-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation CTA Button */
+.nav-cta .btn {
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.nav-cta .btn i {
+    transition: transform 0.3s ease;
+    margin-left: 5px;
+}
+
+.nav-cta .btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Mobile Menu */
+@media (max-width: 991.98px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: #0a0a0a;
+        padding: 5rem 2rem;
+        transition: 0.5s;
+        overflow-y: auto;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-collapse.show {
+        right: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .nav-item {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.3s ease;
+    }
+
+    .navbar-collapse.show .nav-item {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: calc(0.1s * var(--i, 0));
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.75rem 1rem !important;
+        margin: 0.25rem 0;
+        display: block;
+    }
+
+    .nav-cta {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+/* Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Active State */
+.nav-link.active {
+    color: #ffc107 !important;
+}
+
+/* Hover Effect */
+.nav-link:hover .nav-link-text::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Navigation Scroll Effect */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header.scrolled .navbar-brand {
+    animation: fadeInDown 0.5s ease forwards;
+}
+
+/* Fix for Bootstrap container */
+.navbar > .container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Ensure proper spacing for fixed header */
+body {
+    padding-top: 80px;
+}
+
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 70px;
+    }
+}
