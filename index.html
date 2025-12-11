@@ -48,6 +48,9 @@
     <!-- Testimonials Stylesheet -->
     <link href="css/testimonial.css" rel="stylesheet">
     
+    <!-- About Section Stylesheet -->
+    <link href="css/about-section.css" rel="stylesheet">
+    
     <!-- Footer Stylesheet -->
     <link href="css/footer.css" rel="stylesheet">
     
@@ -140,7 +143,11 @@
                     <div class="col-lg-6 mb-5 mb-lg-0">
                         <div class="hero-content fade-in">
                             <h6 class="hero-subtitle text-uppercase text-gold mb-3 slide-up" style="animation-delay: 0.2s">Award-Winning Photography</h6>
-                            <h1 class="hero-title text-white mb-4 slide-up" style="animation-delay: 0.4s">Capturing Timeless Moments with Artistic Precision</h1>
+                            <h1 class="hero-title text-white mb-3 slide-up" style="animation-delay: 0.4s">Capturing Timeless Moments with Artistic Precision</h1>
+                            <div class="experience-badge slide-up" style="animation-delay: 0.5s">
+                                <span class="years">10+</span>
+                                <span class="label">Years Experience</span>
+                            </div>
                             <p class="hero-description text-white-50 mb-5 slide-up" style="animation-delay: 0.6s">Award-winning photography blending emotion, light, and storytelling to create images that last a lifetime.</p>
                             <div class="hero-buttons slide-up" style="animation-delay: 0.8s">
                                 <a href="#portfolio" class="btn btn-primary btn-gold me-3">View Portfolio</a>
@@ -168,25 +175,20 @@
 
 
     <!-- About Section -->
-    <!-- Modern About Section -->
-    <section id="about" class="about-section position-relative overflow-hidden">
+    <section id="about" class="about-section">
         <!-- Decorative Elements -->
         <div class="about-shape-1"></div>
         <div class="about-shape-2"></div>
         
-        <div class="container py-6 py-lg-8 position-relative">
+        <div class="container position-relative">
             <div class="row align-items-center">
                 <!-- Image Column with Decorative Frame -->
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="about-image-container wow fadeInLeft" data-wow-delay="0.3s">
                         <div class="about-image-frame">
-                            <img src="img/portfolio/about image.jpg" 
+                            <img src="img/portfolio/about image.jpeg" 
                                  alt="Brian Isaji - Professional Photographer" 
                                  class="about-image img-fluid">
-                        </div>
-                        <div class="experience-badge">
-                            <span class="years">10+</span>
-                            <span class="label">Years Experience</span>
                         </div>
                     </div>
                 </div>
@@ -194,19 +196,38 @@
                 <!-- Content Column -->
                 <div class="col-lg-6">
                     <div class="about-content wow fadeInRight" data-wow-delay="0.5s">
-                        <div class="section-header mb-4">
-                            <h6 class="text-gold text-uppercase letter-spacing-2 mb-3">The Visionary Behind The Lens</h6>
-                            <h2 class="text-white display-5 fw-bold mb-4">Crafting Timeless <span class="text-gold">Visual Narratives</span></h2>
-                            <div class="section-divider"></div>
+                        <div class="section-header">
+                            <h6>The Visionary Behind The Lens</h6>
+                            <h2>Crafting Timeless <span class="text-gold">Visual Narratives</span></h2>
                         </div>
                         
-                        <div class="about-text mb-5">
-                            <p class="lead text-white-70 mb-4">
+                        <div class="about-text">
+                            <p>
                                 Welcome to my world of visual storytelling, where every frame is a canvas and every moment is an opportunity to create something extraordinary. I'm Brian Isaji, a passionate photographer dedicated to capturing the essence of human emotion and the beauty of fleeting moments.
                             </p>
-                            <p class="text-white-60">
+                            <p>
                                 With a keen eye for detail and a heart that beats for authentic storytelling, I blend technical expertise with artistic vision to create images that don't just document, but truly resonate. My approach is rooted in building genuine connections, allowing me to capture the unguarded, authentic moments that reveal the true spirit of my subjects.
                             </p>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Sessions</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Awards</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
                         </div>
                         
                         <div class="about-features row g-4 mb-5">
@@ -528,7 +549,7 @@
     </section>
 
     <!-- Booking Section -->
-    <section id="booking" class="booking-section py-5" style="background-color: #0a0a0a;">
+    <section id="booking" class="booking-section py-5" style="background-color: #0B0B0B;">
         <div class="container py-5">
             <div class="section-header text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-gold mb-3">Schedule Your Session</h6>
@@ -536,81 +557,75 @@
                 <div class="gold-line mx-auto"></div>
             </div>
             
-            <div class="booking-container">
+            <div class="row g-5 align-items-stretch">
                 <!-- Left Column: Booking Info -->
                 <div class="col-lg-5">
-                    <div class="booking-info-modern wow fadeInLeft" data-wow-delay="0.1s">
-                        <!-- Header with Icon -->
-                        <div class="info-header">
-                            <div class="info-icon">
-                                <i class="fas fa-camera-retro"></i>
-                            </div>
-                            <h3>Capture Your Special Moments</h3>
-                            <p>Let's create beautiful memories together. I'll get back to you within 24 hours to confirm your booking details.</p>
+                    <div class="booking-info-modern h-100 p-4 p-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="info-header text-center mb-5">
+                            <i class="fas fa-camera-retro info-icon mb-3"></i>
+                            <h3 class="text-white mb-3">Capture Your Special Moments</h3>
+                            <p class="text-muted">Let's create beautiful memories together. I'll get back to you within 24 hours to confirm your booking details.</p>
                         </div>
 
                         <!-- Session Types -->
-                        <div class="info-card">
-                            <div class="info-card-header">
+                        <div class="info-card mb-4">
+                            <div class="info-card-header mb-3">
                                 <i class="fas fa-images text-gold me-2"></i>
-                                <h4>Session Types</h4>
+                                <h4 class="text-white d-inline">Session Types</h4>
                             </div>
                             <div class="info-card-body">
-                                <div class="session-tags">
-                                    <span class="session-tag">Portrait</span>
-                                    <span class="session-tag">Family</span>
-                                    <span class="session-tag">Couples</span>
-                                    <span class="session-tag">Maternity</span>
-                                    <span class="session-tag">Newborn</span>
-                                    <span class="session-tag">Events</span>
-                                    <span class="session-tag">Commercial</span>
-                                    <span class="session-tag">And More</span>
+                                <div class="feature-item mb-3">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-portrait"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5 class="text-white">Portrait Sessions</h5>
+                                        <p class="text-muted mb-0">Individual or group portraits in stunning locations</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item mb-3">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5 class="text-white">Family Sessions</h5>
+                                        <p class="text-muted mb-0">Capture your family's special moments together</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-calendar-star"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5 class="text-white">Event Coverage</h5>
+                                        <p class="text-muted mb-0">Professional photography for your special events</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Availability -->
-                        <div class="info-card">
-                            <div class="info-card-header">
-                                <i class="far fa-clock text-gold me-2"></i>
-                                <h4>Availability</h4>
-                            </div>
-                            <div class="info-card-body">
-                                <div class="availability-item">
-                                    <span class="day">Monday - Saturday</span>
-                                    <span class="time">9:00 AM - 6:00 PM</span>
+                        <!-- Pricing Info -->
+                        <div class="pricing-info">
+                            <h4 class="text-white mb-3">Session Pricing</h4>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <span class="package">Portrait Session</span>
+                                    <!-- <span class="price">$299</span> -->
                                 </div>
-                                <div class="availability-item closed">
-                                    <span class="day">Sunday</span>
-                                    <span class="time">Closed</span>
+                                <div class="price-option">
+                                    <span class="package">Family Session</span>
+                                    <!-- <span class="price">$399</span> -->
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Location -->
-                        <div class="info-card">
-                            <div class="info-card-header">
-                                <i class="fas fa-map-marker-alt text-gold me-2"></i>
-                                <h4>Location</h4>
-                            </div>
-                            <div class="info-card-body">
-                                <p class="mb-2">Available for on-location shoots throughout the area or at my studio in:</p>
-                                <div class="location-details">
-                                    <i class="fas fa-building"></i>
-                                    <span>Nairobi Studio</span>
-                                </div>
-                                <div class="mt-3">
-                                    <a href="https://maps.google.com" target="_blank" class="btn-location">
-                                        <i class="fas fa-directions me-2"></i>Get Directions
-                                    </a>
+                                <div class="price-option">
+                                    <span class="package">Event Coverage</span>
+                                    <!-- <span class="price">Starting at $999</span> -->
                                 </div>
                             </div>
                         </div>
 
-                        <!-- CTA Section -->
-                        <div class="info-cta">
-                            <h4>Have Questions?</h4>
-                            <p>I'm here to help you plan your perfect session.</p>
+                        <div class="mt-5 text-center">
+                            <h5 class="text-white mb-3">Have Questions?</h5>
+                            <p class="text-muted mb-4">I'm here to help you plan your perfect session.</p>
                             <a href="#contact" class="btn btn-outline-gold">
                                 <i class="far fa-envelope me-2"></i>Contact Me
                             </a>
@@ -619,133 +634,104 @@
                 </div>
                 
                 <!-- Right Column: Booking Form -->
-                <div class="booking-form-container wow fadeInRight" data-wow-delay="0.3s">
-                    <form id="bookingForm" class="modern-booking-form" action="https://formsubmit.co/isajibrian@yahoo.com" method="POST" novalidate>
+                <div class="col-lg-7">
+                    <div class="booking-form-container h-100 p-4 p-lg-5 wow fadeInRight" data-wow-delay="0.2s">
+                        <form id="bookingForm" class="booking-form" action="https://formsubmit.co/isajibrian@yahoo.com" method="POST" novalidate>
                             <!-- FormSubmit Configuration -->
                             <input type="hidden" name="_subject" value="New Booking Request - Brian Isaji Photography">
-                            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
                             <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://brianisaji.com/thank-you">
+                            <input type="hidden" name="_autoresponse" value="Thank you for your booking request! We'll get back to you within 24 hours to confirm your session details.">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="text" name="_honey" style="display:none">
-                            <input type="hidden" name="_autoresponse" value="Thank you for your booking request! I've received your inquiry and will get back to you within 24-48 hours to confirm your session details. - Brian">
+                            
                             <!-- Form Header -->
                             <div class="form-header mb-4">
                                 <h3 class="text-white mb-2">Book Your Session</h3>
-                                <p class="text-muted small">Fill out the form below and we'll get back to you within 24 hours</p>
-                                <div class="divider-gold my-3"></div>
+                                <p class="text-muted">Fill in your details and I'll get back to you within 24 hours</p>
                             </div>
-
-                            <!-- Progress Steps (Optional) -->
-                            <div class="form-progress mb-4">
-                                <div class="progress-step active">1</div>
-                                <div class="progress-connector"></div>
-                                <div class="progress-step">2</div>
-                                <div class="progress-connector"></div>
-                                <div class="progress-step">3</div>
+                            
+                            <!-- Personal Information -->
+                            <div class="form-group">
+                                <input type="text" id="fullName" name="fullName" class="form-control" placeholder=" " required>
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <div class="invalid-feedback">Please enter your full name</div>
                             </div>
-
-                            <!-- Form Grid -->
-                            <div class="form-grid">
-                                <!-- Full Name -->
-                                <div class="form-group floating-label">
-                                    <input type="text" id="fullName" name="fullName" class="form-control" required>
-                                    <label for="fullName">Full Name <span class="required">*</span></label>
-                                    <div class="form-icon"><i class="fas fa-user"></i></div>
-                                    <div class="invalid-feedback">Please provide your full name</div>
-                                </div>
-
-                                <!-- Email -->
-                                <div class="form-group floating-label">
-                                    <input type="email" id="email" name="email" class="form-control" required>
-                                    <label for="email">Email Address <span class="required">*</span></label>
-                                    <div class="form-icon"><i class="fas fa-envelope"></i></div>
-                                    <div class="invalid-feedback">Please provide a valid email</div>
-                                </div>
-
-                                <!-- Phone -->
-                                <div class="form-group floating-label">
-                                    <input type="tel" id="phone" name="phone" class="form-control">
-                                    <label for="phone">Phone Number</label>
-                                    <div class="form-icon"><i class="fas fa-phone"></i></div>
-                                </div>
-
-                                <!-- Session Type -->
-                                <div class="form-group select-group">
-                                    <label for="sessionType">Session Type <span class="required">*</span></label>
-                                    <div class="select-wrapper">
-                                        <select id="sessionType" name="sessionType" class="form-select" required>
-                                            <option value="" selected disabled>Select session type</option>
-                                            <option value="portrait">Portrait Photography</option>
-                                            <option value="family">Family Portrait</option>
-                                            <option value="couple">Couple's Session</option>
-                                            <option value="wedding">Wedding Photography</option>
-                                            <option value="maternity">Maternity Session</option>
-                                            <option value="newborn">Newborn Photography</option>
-                                            <option value="event">Event Coverage</option>
-                                            <option value="commercial">Commercial Photography</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                        <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
-                                    </div>
-                                    <div class="invalid-feedback">Please select a session type</div>
-                                </div>
-
-                                <!-- Date Picker -->
-                                <div class="form-group floating-label" data-date-picker>
-                                    <input type="text" id="preferredDate" name="preferredDate" class="form-control date-picker" required readonly>
-                                    <label for="preferredDate">Preferred Date <span class="required">*</span></label>
-                                    <div class="form-icon"><i class="far fa-calendar-alt"></i></div>
-                                    <div class="invalid-feedback">Please select a date</div>
-                                </div>
-
-                                <!-- Location -->
-                                <div class="form-group floating-label">
-                                    <input type="text" id="location" name="location" class="form-control">
-                                    <label for="location">Preferred Location</label>
-                                    <div class="form-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                    <small class="form-text">Studio or preferred location</small>
-                                </div>
-
-                                <!-- Message -->
-                                <div class="form-group floating-label full-width">
-                                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-                                    <label for="message">Tell us about your vision <span class="required">*</span></label>
-                                    <div class="invalid-feedback">Please tell us about your vision</div>
-                                </div>
-
-                                <!-- Privacy Policy -->
-                                <div class="form-group full-width">
-                                    <div class="custom-checkbox">
-                                        <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
-                                        <span class="checkmark"></span>
-                                        <label for="privacyPolicy" class="form-check-label">
-                                            I agree to the <a href="#" class="text-gold">privacy policy</a> and terms of service
-                                        </label>
-                                    </div>
-                                    <div class="invalid-feedback">You must agree to continue</div>
-                                </div>
-
-                                <!-- Submit Button -->
-                                <div class="form-group full-width text-center mt-4">
-                                    <button type="submit" class="btn btn-modern-gold w-100">
-                                        <span class="btn-text">Request Booking</span>
-                                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                                    </button>
-                                </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <div class="invalid-feedback">Please enter a valid email address</div>
                             </div>
-                    </form>
-                    
-                    <div id="bookingSuccess" class="booking-success text-center p-4 mt-4" style="display: none;">
-                        <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
-                        <h3 class="text-white">Thank You for Your Booking Request!</h3>
-                        <p class="text-muted">We've received your request and will get back to you within 24 hours to confirm your session details.</p>
-                        <a href="#portfolio" class="btn btn-outline-light mt-3">View Portfolio</a>
+                            
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder=" " required>
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <div class="invalid-feedback">Please enter your phone number</div>
+                            </div>
+                            
+                            <!-- Session Details -->
+                            <div class="form-group">
+                                <select id="sessionType" name="sessionType" class="form-select" required>
+                                    <option value="" disabled selected>Select a session type</option>
+                                    <option value="portrait">Portrait Session</option>
+                                    <option value="family">Family Session</option>
+                                    <option value="event">Event Coverage</option>
+                                    <option value="other">Other (Please specify)</option>
+                                </select>
+                                <!-- <label for="sessionType">Session Type <span class="required">*</span></label> -->
+                                <div class="invalid-feedback">Please select a session type</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="preferredDate" name="preferredDate" class="form-control date-picker" placeholder="Select date" required readonly>
+                                <div class="invalid-feedback">Please select a date</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select id="preferredTime" name="preferredTime" class="form-select" required>
+                                    <option value="" disabled selected>Select a time</option>
+                                    <option value="morning">Morning (8AM - 12PM)</option>
+                                    <option value="afternoon">Afternoon (12PM - 4PM)</option>
+                                    <option value="evening">Evening (4PM - 8PM)</option>
+                                </select>
+                                <!-- <label for="preferredTime">Preferred Time <span class="required">*</span></label> -->
+                                <div class="invalid-feedback">Please select a time</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="specialRequests" name="specialRequests" class="form-control" rows="3" placeholder=" "></textarea>
+                                <label for="specialRequests">Special Requests</label>
+                            </div>
+                            
+                        
+                            
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-gold btn-lg">
+                                    <span class="submit-text">Submit Booking</span>
+                                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <!-- Success Message (initially hidden) -->
+                        <div id="bookingSuccess" class="text-center" style="display: none;">
+                            <div class="success-icon mb-4">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3 class="text-white mb-3">Booking Request Sent!</h3>
+                            <p class="text-muted mb-4">Thank you for your booking request. I'll get back to you within 24 hours to confirm your session details.</p>
+                            <button id="bookAnother" class="btn btn-outline-light">
+                                <i class="far fa-calendar-plus me-2"></i>Book Another Session
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </section>
-   
 
     <!-- CTA Section -->
     <section class="cta-section position-relative overflow-hidden">
@@ -997,15 +983,24 @@
                     </div>
                 </div>
                 
-                <!-- Newsletter -->
+                <!-- Clock & Business Hours -->
                 <div class="col-lg-3 col-md-6">
-                    <h5>Newsletter</h5>
-                    <p>Subscribe to get updates on special offers, photography tips, and more.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your Email Address" required>
-                        <button type="submit" class="btn-newsletter mt-3">Subscribe</button>
-                    </form>
+                    <h5>Current Time</h5>
+                    <div class="analog-clock">
+                        <div class="clock-face">
+                            <div class="hand hour-hand"></div>
+                            <div class="hand min-hand"></div>
+                            <div class="hand second-hand"></div>
+                            <div class="center-dot"></div>
+                        </div>
+                    </div>
+                    <div class="business-hours mt-4">
+                        <p class="mb-1"><strong>Business Hours:</strong></p>
+                        <p class="mb-1">Mon-Fri: <span class="text-gold">9:00 AM - 6:00 PM</span></p>
+                        <p>Sat: <span class="text-gold">10:00 AM - 4:00 PM</span></p>
+                    </div>
                 </div>
+                
             </div>
             
             <!-- Footer Bottom -->
@@ -1099,6 +1094,245 @@
     
     <!-- Booking Form Javascript -->
     <script src="js/booking-form.js"></script>
+    
+    <!-- Flatpickr Dark Theme -->
+    <style>
+        .flatpickr-calendar {
+            background: #1e1e1e;
+            color: #f0f0f0;
+            border: 1px solid #333;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        .flatpickr-day {
+            color: #f0f0f0;
+        }
+        .flatpickr-day:hover {
+            background: #333;
+            border-color: #444;
+        }
+        .flatpickr-day.selected, 
+        .flatpickr-day.selected:hover {
+            background: #D4AF37;
+            border-color: #D4AF37;
+            color: #1e1e1e;
+            font-weight: 600;
+        }
+        .flatpickr-day.today {
+            border-color: #D4AF37;
+        }
+        .flatpickr-day.disabled, 
+        .flatpickr-day.disabled:hover {
+            color: #666;
+            background: transparent;
+        }
+        .flatpickr-weekdays {
+            background: #D4AF37;
+            color: #1e1e1e;
+        }
+        .flatpickr-weekday {
+            color: #1e1e1e !important;
+            font-weight: 600;
+        }
+        .flatpickr-months .flatpickr-month {
+            color: #f0f0f0;
+        }
+        .flatpickr-current-month .numInputWrapper span.arrowUp:after {
+            border-bottom-color: #f0f0f0;
+        }
+        .flatpickr-current-month .numInputWrapper span.arrowDown:after {
+            border-top-color: #f0f0f0;
+        }
+        .flatpickr-time input, 
+        .flatpickr-time .flatpickr-time-separator, 
+        .flatpickr-time .flatpickr-am-pm {
+            color: #f0f0f0;
+        }
+        .flatpickr-time input:hover, 
+        .flatpickr-time .flatpickr-am-pm:hover,
+        .flatpickr-time input:focus, 
+        .flatpickr-time .flatpickr-am-pm:focus {
+            background: #333;
+        }
+    </style>
+
+    <!-- Flatpickr Modern Dark Theme -->
+    <style>
+        /* Modern Flatpickr Overrides */
+        .flatpickr-calendar {
+            background: #0B0B0B;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .flatpickr-day {
+            color: #f0f0f0;
+            border-radius: 6px;
+            margin: 2px;
+            height: 40px;
+            line-height: 40px;
+            transition: all 0.2s ease;
+        }
+
+        .flatpickr-day:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+        }
+
+        .flatpickr-day.selected, 
+        .flatpickr-day.startRange, 
+        .flatpickr-day.endRange, 
+        .flatpickr-day.selected.inRange, 
+        .flatpickr-day.startRange.inRange, 
+        .flatpickr-day.endRange.inRange, 
+        .flatpickr-day.selected:focus, 
+        .flatpickr-day.startRange:focus, 
+        .flatpickr-day.endRange:focus, 
+        .flatpickr-day.selected:hover, 
+        .flatpickr-day.startRange:hover, 
+        .flatpickr-day.endRange:hover, 
+        .flatpickr-day.selected.prevMonthDay, 
+        .flatpickr-day.startRange.prevMonthDay, 
+        .flatpickr-day.endRange.prevMonthDay, 
+        .flatpickr-day.selected.nextMonthDay, 
+        .flatpickr-day.startRange.nextMonthDay, 
+        .flatpickr-day.endRange.nextMonthDay {
+            background: #D4AF37;
+            color: #0B0B0B;
+            border-color: #D4AF37;
+            font-weight: 600;
+        }
+
+        .flatpickr-day.today {
+            border-color: #D4AF37;
+            color: #D4AF37;
+            font-weight: 600;
+        }
+
+        .flatpickr-day.today:hover {
+            background: rgba(212, 175, 55, 0.2);
+            color: #D4AF37;
+        }
+
+        .flatpickr-day.disabled, 
+        .flatpickr-day.disabled:hover {
+            color: rgba(255, 255, 255, 0.2);
+            background: transparent;
+            cursor: not-allowed;
+        }
+
+        .flatpickr-weekdays {
+            background: #D4AF37;
+            padding: 10px 0;
+        }
+
+        .flatpickr-weekday {
+            color: #0B0B0B !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        .flatpickr-current-month {
+            padding: 15px 0;
+            font-size: 1.1em;
+        }
+
+        .flatpickr-months .flatpickr-prev-month,
+        .flatpickr-months .flatpickr-next-month {
+            color: #f0f0f0;
+            fill: #f0f0f0;
+            top: 15px;
+        }
+
+        .flatpickr-months .flatpickr-prev-month:hover,
+        .flatpickr-months .flatpickr-next-month:hover {
+            color: #D4AF37;
+        }
+
+        .flatpickr-time input,
+        .flatpickr-time .flatpickr-time-separator,
+        .flatpickr-time .flatpickr-am-pm {
+            color: #f0f0f0;
+        }
+
+        .flatpickr-time input:hover,
+        .flatpickr-time .flatpickr-am-pm:hover,
+        .flatpickr-time input:focus,
+        .flatpickr-time .flatpickr-am-pm:focus {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Highlight Saturdays */
+        .flatpickr-day.saturday {
+            color: #D4AF37;
+            font-weight: 500;
+        }
+
+        /* Animation for day selection */
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .flatpickr-day.selected {
+            animation: pop 0.3s ease-out;
+        }
+    </style>
+
+    <!-- Initialize Date Picker -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Flatpickr for date selection with modern dark theme
+            flatpickr("#preferredDate", {
+                minDate: "today",
+                dateFormat: "Y-m-d",
+                disable: [
+                    function(date) {
+                        // Only disable Sundays (0 = Sunday, 6 = Saturday)
+                        return (date.getDay() === 0);
+                    }
+                ],
+                onDayCreate: function(dObj, dStr, fp, dayElem) {
+                    // Add class for Saturdays
+                    if (dayElem.dateObj.getDay() === 6) {
+                        dayElem.classList.add('saturday');
+                    }
+                },
+                onReady: function(selectedDates, dateStr, instance) {
+                    // Set minimum date to today
+                    instance.set('minDate', 'today');
+                    
+                    // Add custom classes to navigation arrows
+                    const nav = instance.calendarContainer.querySelectorAll('.flatpickr-prev-month, .flatpickr-next-month');
+                    nav.forEach(arrow => {
+                        arrow.innerHTML = '<i class="fas fa-chevron-' + 
+                            (arrow.classList.contains('flatpickr-prev-month') ? 'left' : 'right') + '"></i>';
+                    });
+                },
+                nextArrow: '<i class="fas fa-chevron-right"></i>',
+                prevArrow: '<i class="fas fa-chevron-left"></i>',
+                locale: {
+                    firstDayOfWeek: 1 // Start week on Monday
+                },
+                allowInput: false,
+                clickOpens: true,
+                animate: true
+            });
+        });
+    </script>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254792409104" class="float-whatsapp" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat with us</span>
+    </a>
+    
+    <!-- Analog Clock Javascript -->
+    <script src="js/clock.js"></script>
 </body>
 
 </html>
